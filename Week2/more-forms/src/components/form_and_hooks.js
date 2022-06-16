@@ -70,7 +70,7 @@ const UserForm = (props) =>
                 )   : null 
             }
 
-                {password != confirmPassword ?
+                {password !== confirmPassword ?
                 (
                     <p>Passwords must match</p>
                 ) : null   
