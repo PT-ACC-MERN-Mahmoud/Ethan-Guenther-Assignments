@@ -1,5 +1,5 @@
 import React from 'react';
-
+import './style.css'
 const Display = (props) => {
 
     const {inputColorArray} = props;
@@ -9,13 +9,14 @@ const Display = (props) => {
         <div>
             {
                 inputColorArray.map((color, index) => (
-                    <div key={index} style={{
+                     <div className='color' key={index} style={{
                         display: "inline-block",
                         margin: "20px",
                         height: "40px",
                         width: "40px",
                         backgroundColor: color
-                    }}>
+                    }}
+                    >
 
                     </div>
                 ))
