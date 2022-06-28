@@ -28,7 +28,7 @@ function App() {
 
   const handleDelete = (delIndex) => {
     const filterList = toDoList.filter((toDo, index) =>{
-      return index != delIndex;
+      return index !== delIndex;
     })
 
     setToDoList(filterList);
