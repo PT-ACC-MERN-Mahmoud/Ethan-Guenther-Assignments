@@ -1,7 +1,6 @@
 const {faker} = require("@faker-js/faker");
 
 const express = require("express");
-const { response } = require("express");
 
 const app = express();
 const port = 8000;
@@ -42,12 +41,12 @@ console.log(createCompany());
 app.get("/api/users/new", (request, response)=> {
     const newUser = createUser();
     response.json(newUser);
-})
+});
 
 app.get("/api/companies/new", (request, response) => {
     const newCompany= createCompany();
     response.json(newCompany);
-})
+});
 
 app.get("/api/user/company", (request, response) => {
     const newUser= createUser();
@@ -58,7 +57,7 @@ app.get("/api/user/company", (request, response) => {
 
     };
     response.json(responseObject);
-})
+});
 
 app.listen(port, () => console.log(`Listening on port: ${port}`) );
 
