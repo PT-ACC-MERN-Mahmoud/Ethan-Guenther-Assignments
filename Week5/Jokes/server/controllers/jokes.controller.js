@@ -9,7 +9,7 @@ module.exports.findAllJokes = (req, res) => {
 }
  
 module.exports.getJokeById = (req, res) => {
-    Joke.findOne({ _id: req.params._id })
+    Joke.findById(req.params.id )
     .then((joke) => res.json(joke))
     .catch((err) => console.log(err));
         };
@@ -26,7 +26,7 @@ module.exports.createJoke = (req, res) => {
  
 module.exports.updateJoke = (req, res) => {
     Joke.findOneAndUpdate(
-        { _id: req.params.id },
+        req.params.id,
         req.body,
         { new: true, runValidators: true }
     )
