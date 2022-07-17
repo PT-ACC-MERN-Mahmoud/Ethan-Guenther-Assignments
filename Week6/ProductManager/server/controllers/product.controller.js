@@ -31,3 +31,22 @@ module.exports.getOneById = (req, res) => {
     )))
 
 }
+
+module.exports.updateProduct = (req, res) => {
+    Product.findByIdAndUpdate({_id: req.params.id}, req.body, {
+        new: true, runValidators: true, 
+    })
+
+    .then((updatedProduct) => {
+        console.log(updatedProduct)
+        res.json(updatedProduct)
+    })
+    .catch((err) => console.log("There was an error updating a product", err))
+}
+
+module.exports.deleteProduct = (req, res) => {
+    Product.deleteOne({_id: req.params.id})
+    .then((result) => res.json(result))
+
+    .catch((err) => console.log("There was an issue deleting a product", err))
+}
