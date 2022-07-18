@@ -6,7 +6,9 @@ import UpdateProduct from './components/UpdateProduct';
 
 function App() {
   return (
+    <div className='App'>
 
+    
     <BrowserRouter>
       <div>
         <Routes>
@@ -17,6 +19,7 @@ function App() {
 
       </div>
     </BrowserRouter>
+    </div>
 
   );
 }

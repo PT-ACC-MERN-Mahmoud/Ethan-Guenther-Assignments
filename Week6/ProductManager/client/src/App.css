@@ -1,7 +1,16 @@
 .App {
   text-align: center;
 }
-
+.form_style {
+  color: gray;
+  display: flex;
+  justify-content: space-evenly;
+  background-color: rgb(238, 235, 235);
+  width: 255px;
+  margin: auto;
+  border-radius: 25px;
+  padding: 8px;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
